@@ -19,7 +19,7 @@ import type { BookmarkFolder } from '../../../graphql/bookmarks';
 
 type NewFeedProps = Pick<BookmarkFolder, 'id' | 'name' | 'icon'>;
 
-type AddToCustomFeedModalProps = Omit<ModalProps, 'children'> & {
+type CreateCustomFeedModalProps = Omit<ModalProps, 'children'> & {
   onSubmit: (feed: NewFeedProps) => void;
   feed?: NewFeedProps;
 };
@@ -42,11 +42,11 @@ const ModalTitle = () => (
   </>
 );
 
-const AddToCustomFeedModal = ({
+const CreateCustomFeedModal = ({
   feed,
   onSubmit,
   ...rest
-}: AddToCustomFeedModalProps): ReactElement => {
+}: CreateCustomFeedModalProps): ReactElement => {
   const [icon, setIcon] = useState(feed?.icon || '');
   const [name, setName] = useState(feed?.name || '');
   const isMobile = useViewSize(ViewSize.MobileL);
@@ -138,4 +138,4 @@ const AddToCustomFeedModal = ({
   );
 };
 
-export default AddToCustomFeedModal;
+export default CreateCustomFeedModal;

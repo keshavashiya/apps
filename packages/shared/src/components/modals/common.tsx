@@ -225,10 +225,10 @@ const BookmarksFolderEntryModal = dynamic(
     ),
 );
 
-const AddToCustomFeedModal = dynamic(
+const CreateCustomFeedModal = dynamic(
   () =>
     import(
-      /* webpackChunkName: "addToCustomFeedModal" */ './feed/AddToCustomFeedModal'
+      /* webpackChunkName: "createCustomFeedModal" */ './feed/CreateCustomFeedModal'
     ),
 );
 
@@ -270,7 +270,7 @@ export const modals = {
   [LazyModal.BookmarksFolderEntry]: BookmarksFolderEntryModal,
   [LazyModal.ClickbaitShield]: ClickbaitShieldModal,
   [LazyModal.MoveBookmark]: MoveBookmarkModal,
-  [LazyModal.AddToCustomFeed]: AddToCustomFeedModal,
+  [LazyModal.CreateCustomFeed]: CreateCustomFeedModal,
 };
 
 type GetComponentProps<T> = T extends
