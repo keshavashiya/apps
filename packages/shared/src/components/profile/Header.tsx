@@ -67,8 +67,7 @@ export function Header({
         },
       });
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [user],
+    [user, openModal],
   );
 
   const blocked = contentPreference?.status === ContentPreferenceStatus.Blocked;
